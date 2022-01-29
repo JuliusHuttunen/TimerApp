@@ -1,0 +1,184 @@
+body {
+    font-family: 'Exo', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(-45deg, #02151F, #00404D, #00706D, #30A178);
+	background-size: 500% 500%;
+	animation: gradient 15s ease infinite;
+}
+
+.container {
+    height: 300px;
+    width: 100%;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left-side {
+    display: flex;
+}
+
+.right-side {
+    color: #FFD588;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.brand {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+    font-weight: 600;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid white;
+}
+
+.nav-link-wrapper a:hover {
+    color: white;
+}
+
+.active-nav-link{
+    border-bottom: 1px solid white;
+}
+
+.active-nav-link a {
+    color: white !important;
+}
+
+
+/*stopwatch styles*/
+#display {
+    width: 100%;
+    font-size: 72px;
+    text-align: center;
+    margin: 0 0 0 0;
+    color:#FFFFFF;
+}
+
+.buttons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons > button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: .5em 2em 0.3em 2em;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 600;
+    color:#FFD588;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: transparent;
+}
+
+#laps {
+    font-weight: 500;
+    color: #FFD588;
+    display: flex;
+    justify-content: center;
+    line-height: 1.6;
+    font-size: 22px;
+}
+
+.buttons > button:hover {
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+    
+@media(min-width:30em){
+body{
+    background-size: 1200% 1200%;
+}
+    }
+
+
+/*Timer styles*/
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+.base-timer {
+    position:  relative;
+    height: 300px;
+    width: 300px;
+}
+
+.base-timer__circle {
+    fill:none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 0.2px;
+    stroke: #FFFFFF;
+}
+
+.base-timer-label {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #FFFFFF;
+}
+
+
+
+.base-timer__path-remaining {
+    stroke-width: 0.2px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    stroke: #FFD588;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}

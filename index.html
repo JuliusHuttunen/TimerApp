@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Stopwatch</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;1,100&family=Roboto+Mono:wght@100&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Stopwatch</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="timer.html">Timer</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="clock.html">Clock</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="brand">
+                    <div>MADE BY JULIUS HUTTUNEN</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="display">
+            00:00:00
+        </div>
+
+        <div class="buttons">
+            <button id="startStop" onclick="startStop()">Start</button>
+            <button id="reset" onclick="reset()">Reset</button>
+        </div>
+
+        <div id="laps"></div>
+    </div>
+</body>
+
+</html>
